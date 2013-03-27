@@ -16,7 +16,19 @@ class Suit
 
 	public function __toString()
 	{
-		return (string)$this->suit;
+		#return (string)$this->suit;
+		return (string)$this->fancy_key();
+	}
+	
+	public function fancy_key()
+	{
+		$Hearts = "&hearts;";
+		$Spades = "&spades;";
+		$Diamonds = "&diams;";
+		$Clubs = "&clubs;";
+		$tmp = "Diamonds";
+		$tmp = $this->suit;
+		return $$tmp;
 	}
 
 }

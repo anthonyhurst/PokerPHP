@@ -12,7 +12,8 @@ class Dealer
 	public function __construct($players)
 	{
 		$this->players = $players;
-		$this->deck = new Deck();
+		$deck = new Deck();
+		$this->deck = $deck->get_cards();
 		$this->shuffle_deck();
 	}
 
@@ -31,6 +32,11 @@ class Dealer
 				$player->giveCard($topCard);
 			}
 		}
+	}
+
+	public function get_deck()
+	{
+		return $this->deck;
 	}
 }
 

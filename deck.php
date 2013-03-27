@@ -24,7 +24,7 @@ class Deck
 				
 	}
 
-	public function getCards()
+	public function get_cards()
 	{
 		return $this->cards;
 	}

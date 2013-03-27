@@ -16,10 +16,15 @@ $player4 = new Player("Joe");
 
 $players = array($player1, $player2, $player3, $player4);
 $table = new Table($players);
+print count($table->dealer->get_deck());
+print "<br/>\n";
 $table->dealer->deal();
 foreach($players as $player)
 {
 	echo $player . "<br/>\n";
 }
+
+print count($table->dealer->get_deck());
+print "<br/>\n";
 
 ?>

@@ -25,7 +25,7 @@ class Player
 		$cards_str = "";
 		foreach($this->cards as $card)
 		{
-			$cards_str .= (string)$this->card;
+			$cards_str .= (string)$card;
 		}	
 		return "$this->name has $cards_str";
 	}

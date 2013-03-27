@@ -5,7 +5,7 @@ require_once("dealer.php");
 class Table
 {
 
-	private $dealer;
+	public $dealer;
 
 	public function __construct($players)
 	{

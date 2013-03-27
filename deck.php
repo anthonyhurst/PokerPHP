@@ -30,19 +30,4 @@ class Deck
 	}
 }
 
-
-///////
-//
-//	Testing
-//
-///////
-
-
-$deck = new Deck();
-$cards = $deck->getCards();
-foreach($cards as $card)
-{
-	echo $card . "<br/>\n";
-}
-
 ?>

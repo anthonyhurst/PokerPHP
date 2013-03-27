@@ -12,7 +12,7 @@ class Player
 
 	public function giveCard($card)
 	{
-		$this->cards = $card;
+		$this->cards[] = $card;
 	}
 
 	public function getCards()

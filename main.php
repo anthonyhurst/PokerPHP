@@ -15,7 +15,7 @@ $player3 = new Player("Steve");
 $player4 = new Player("Joe");
 
 $players = array($player1, $player2, $player3, $player4);
-$table = new $table($players);
+$table = new Table($players);
 $table->dealer->deal();
 foreach($players as $player)
 {

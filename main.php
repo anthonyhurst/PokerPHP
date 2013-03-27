@@ -14,17 +14,55 @@ $player2 = new Player("Jon");
 $player3 = new Player("Steve");
 $player4 = new Player("Joe");
 
+function cards_left($table)
+{
+	print "Cards left: " . count($table->dealer->get_deck()) . "<br/>\n";
+}
+
 $players = array($player1, $player2, $player3, $player4);
 $table = new Table($players);
-print count($table->dealer->get_deck());
-print "<br/>\n";
+cards_left($table);
 $table->dealer->deal();
 foreach($players as $player)
 {
 	echo $player . "<br/>\n";
 }
+cards_left($table);
 
-print count($table->dealer->get_deck());
-print "<br/>\n";
+$table->dealer->flop();
+
+echo "The flop: ";
+foreach($table->community_cards as $card)
+{
+	echo $card;
+}
+echo "<br/>\n";
+
+cards_left($table);
+
+$table->dealer->turn();
+
+echo "The turn: ";
+foreach($table->community_cards as $card)
+{
+	echo $card;
+}
+echo "<br/>\n";
+
+cards_left($table);
+
+
+$table->dealer->river();
+
+echo "The river: ";
+foreach($table->community_cards as $card)
+{
+	echo $card;
+}
+echo "<br/>\n";
+
+
+cards_left($table);
+
 
 ?>

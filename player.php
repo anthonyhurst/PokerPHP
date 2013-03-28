@@ -8,11 +8,11 @@ class Player {
 		$this->name = $name;
 	}
 
-	public function giveCard($card) {
+	public function give_card($card) {
 		$this->cards[] = $card;
 	}
 
-	public function getCards() {
+	public function get_cards() {
 		return $this->cards;
 	}
 

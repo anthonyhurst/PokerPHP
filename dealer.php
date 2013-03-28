@@ -31,7 +31,7 @@ class Dealer {
 			foreach($this->players as $player)
 			{
 				$topCard = array_shift($this->deck);
-				$player->giveCard($topCard);
+				$player->give_card($topCard);
 			}
 		}
 	}

@@ -1,19 +1,19 @@
 <?php
 
 class Rank {
-	const Ace = 0;
-	const Two = 1;
-	const Three = 2;
-	const Four = 3;
-	const Five = 4;
-	const Six = 5;
-	const Seven = 6;
-	const Eight = 7;
-	const Nine = 8;
-	const Ten = 9;
-	const Jack = 10;
-	const Queen = 11;
-	const King = 12;
+	const Two = 0;
+	const Three = 1;
+	const Four = 2;
+	const Five = 3;
+	const Six = 4;
+	const Seven = 5;
+	const Eight = 6;
+	const Nine = 7;
+	const Ten = 8;
+	const Jack = 9;
+	const Queen = 10;
+	const King = 11;
+	const Ace = 12;
 	
 	private $rank;
 

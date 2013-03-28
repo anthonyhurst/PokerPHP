@@ -8,6 +8,7 @@ require_once("card.php");
 require_once("player.php");
 require_once("dealer.php");
 require_once("table.php");
+require_once("hand.php");
 
 $player1 = new Player("Anthony");
 $player2 = new Player("Jon");
@@ -65,6 +66,19 @@ echo "<br/>\n";
 
 
 cards_left($table);
+
+$hands = array("HighCard");
+foreach($players as $player) {
+	foreach($hands as $hand) {
+		$cards = array_merge($table->community_cards, $player->get_cards());
+		$h = new $hand($cards);
+		if($h->has_hand()) {
+			$power =  $h->get_power();
+			$sub =  $h->get_sub_power();
+			echo "$player has $hand with power=$power and sub=$sub<br/>\n";
+		}
+	}
+}
 
 
 ?>

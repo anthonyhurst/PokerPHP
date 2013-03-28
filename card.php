@@ -12,6 +12,14 @@ class Card {
 		$this->suit = $suit;
 	}
 
+	public function get_rank() {
+		return $this->rank;
+	}
+
+	public function get_suit() {
+		return $this->suit;
+	}
+
 	public function __toString() {
 		return "$this->rank$this->suit";
 	}

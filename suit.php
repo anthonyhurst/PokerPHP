@@ -9,19 +9,20 @@ class Suit
 
 	private $suit;
 
-	public function __construct($suit)
-	{
+	public function __construct($suit) {
 		$this->suit = $suit;
 	}
 
-	public function __toString()
-	{
+	public function full_value() {
+		return $this->suit;
+	}
+
+	public function __toString() {
 		#return (string)$this->suit;
 		return (string)$this->fancy_key();
 	}
 	
-	public function fancy_key()
-	{
+	public function fancy_key() {
 		$Hearts = "&hearts;";
 		$Spades = "&spades;";
 		$Diamonds = "&diams;";

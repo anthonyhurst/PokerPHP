@@ -29,6 +29,8 @@ foreach($players as $player)
 }
 cards_left($table);
 
+echo "<br/>\n";
+
 $table->dealer->flop();
 
 echo "The flop: ";

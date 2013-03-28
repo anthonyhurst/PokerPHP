@@ -4,12 +4,10 @@ require_once("suit.php");
 require_once("rank.php");
 require_once("card.php");
 
-class Deck
-{
+class Deck {
 	private $cards;
 
-	public function __construct()
-	{
+	public function __construct() {
 		$rank = new ReflectionClass('Rank');		
 		$suit = new ReflectionClass('suit');		
 
@@ -24,8 +22,7 @@ class Deck
 				
 	}
 
-	public function get_cards()
-	{
+	public function get_cards() {
 		return $this->cards;
 	}
 }

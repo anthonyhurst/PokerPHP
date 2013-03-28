@@ -3,8 +3,7 @@
 require_once("deck.php");
 require_once("player.php");
 
-class Dealer
-{
+class Dealer {
 	private $deck;
 	private $players;
 	public $table;
@@ -14,8 +13,7 @@ class Dealer
 	const CARDS_TURN = 1; 
 	const CARDS_RIVER = 1; 
 
-	public function __construct($players, $table)
-	{
+	public function __construct($players, $table) {
 		$this->players = $players;
 		$this->table = $table;
 		$deck = new Deck();
@@ -23,13 +21,11 @@ class Dealer
 		$this->shuffle_deck();
 	}
 
-	public function shuffle_deck()
-	{
+	public function shuffle_deck() {
 		shuffle($this->deck);
 	}
 
-	public function deal()
-	{
+	public function deal() {
 		for($i = 0; $i < Dealer::CARDS_PER_PLAYER; $i++)
 		{
 			foreach($this->players as $player)
@@ -40,28 +36,23 @@ class Dealer
 		}
 	}
 
-	public function get_deck()
-	{
+	public function get_deck() {
 		return $this->deck;
 	}
 
-	public function flop()
-	{
+	public function flop() {
 		$this->give_table_card(Dealer::CARDS_FLOP);
 	}
 
-	public function turn()
-	{
+	public function turn() {
 		$this->give_table_card(Dealer::CARDS_TURN);
 	}
 
-	public function river()
-	{
+	public function river() {
 		$this->give_table_card(Dealer::CARDS_RIVER);
 	}
 
-	public function give_table_card($n)
-	{
+	public function give_table_card($n) {
 		for($i = 0; $i < $n; $i++)
 		{
 			$topCard = array_shift($this->deck);

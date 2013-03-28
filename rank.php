@@ -1,7 +1,6 @@
 <?php
 
-class Rank
-{
+class Rank {
 	const Ace = 0;
 	const Two = 1;
 	const Three = 2;
@@ -18,19 +17,20 @@ class Rank
 	
 	private $rank;
 
-	public function __construct($rank)
-	{
+	public function __construct($rank) {
 		$this->rank = $rank;
 	}
+	
+	public function full_value() {
+		return $this->rank;
+	}
 
-	public function __toString()
-	{
+	public function __toString() {
 		#return (string)$this->rank;
 		return (string)$this->fancy_key();
 	}
 	
-	public function string_to_number($str)
-	{
+	public function string_to_number($str) {
 		switch($str) {
 			case "Two":
 				return 2;
@@ -56,8 +56,7 @@ class Rank
 		}
 	}
 
-	public function fancy_key()
-	{
+	public function fancy_key() {
 		$tmp = $this->rank;
 		$numeric = $this->string_to_number($tmp);
 		if($numeric != null)
